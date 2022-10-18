@@ -12,9 +12,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Swizzlean"),
+            name: "Swizzlean",
+            exclude: ["Supporting Files/Info.plist",
+                      ""]),
         .testTarget(
             name: "SwizzleanTests",
-            dependencies: ["Swizzlean"])
+            dependencies: ["Swizzlean"],
+            exclude: ["Supporting Files/Info.plist"])
     ]
 )
